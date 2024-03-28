@@ -20,4 +20,8 @@ export class CountryService {
 
     return this.http.get<[Country]>(this.url,{ headers: {'Content-Type':'application/json;','X-Api-Key':'g5JJOWG4onl+LvQGy/wFGA==KPiVGmOg6rpbq6Ih'}, params: {'name':this.country}}).pipe(first());
   }
+
+  getCountryList() {
+    return this.http.get<[Country]>(this.url,{ headers: {'Content-Type':'application/json;','X-Api-Key':'g5JJOWG4onl+LvQGy/wFGA==KPiVGmOg6rpbq6Ih'}, params: {'currency':'EUR'}}).pipe();
+  }
 }
